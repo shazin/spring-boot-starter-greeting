@@ -1,1 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.github.shazin.greeter.starter.config.GreeterServiceAutoConfiguration
