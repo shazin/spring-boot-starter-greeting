@@ -5,8 +5,10 @@ import org.junit.Test;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class GreeterServiceAutoConfigurationTest {
 
@@ -24,6 +26,7 @@ public class GreeterServiceAutoConfigurationTest {
     }
 
     @Configuration
+    @PropertySource("classpath:application.properties")
     @ImportAutoConfiguration(GreeterServiceAutoConfiguration.class)
     static class TestConfiguration {
 
